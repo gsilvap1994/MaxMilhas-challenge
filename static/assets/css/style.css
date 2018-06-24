@@ -1,0 +1,16 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 25px 0;
+}
+
+.hidden {
+    display:none!important;
+}
+
+.query-result {
+    margin: 10px -15px 26px -15px;
+}
