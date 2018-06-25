@@ -1,6 +1,8 @@
 
 
+
 $(document).ready(function () {
+    $.toast('Toast message to be shown')
 
     $('.cpf').mask('000.000.000-00', { reverse: true , onComplete: (cpf) => {
         let field  = $('#register').val().length === 0 ? 'query' : 'register';
