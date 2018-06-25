@@ -1,9 +1,7 @@
 
 
-
 $(document).ready(function () {
-    $.toast('Toast message to be shown')
-
+    
     $('.cpf').mask('000.000.000-00', { reverse: true , onComplete: (cpf) => {
         let field  = $('#register').val().length === 0 ? 'query' : 'register';
         let ajaxObject = makeAjaxObject(cleanCpf(cpf),field);
@@ -31,7 +29,7 @@ $(document).ready(function () {
                 $('.query-result').removeClass('hidden');
             }
             else {
-                
+                toastr.success('CPF incluído com sucesso.');
             }
         }).fail(error => {
             $('#cpfHelp').text(error.responseJSON.message);
@@ -44,9 +42,9 @@ $(document).ready(function () {
         let status = $('.change-status').text() === 'Remover' ? 'BLOCK' : 'FREE';
         let putData = {cpf: cpf, status: status}
         $.ajax({url : '/cadastro', method: 'PUT', data: putData}).done(response => {
-            console.log(response)
+            toastr.success('CPF atualizado com sucesso.')
         }).fail(error => {
-            console.log(error)
+            toastr.error('Algum erro aconteceu, recarregue a página e tente novamente.')
         })
     })
     
