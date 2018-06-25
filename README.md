@@ -15,6 +15,7 @@ The projects dependencies includes docker and npm
 - Download [Docker](https://docs.docker.com/docker-for-windows/install/)
 - Download [npm](https://www.npmjs.com/get-npm)
 - Clone this repository: `git clone https://github.com/gsilvap1994/MaxMilhas-challenge.git`
+- Run `npm install && npm start` in the root directory
 
 The next step is the project setup.
 
